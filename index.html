@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Test</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="container header">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="h1">Список компаний</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container add">
+        <div class="col-12 add__btn">
+            <button type="button" class="btn btn1 btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Добавить
+            </button>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-responsive table-bordered" id="zen">
+                    <thead>
+                        <tr>
+                            <th scope="col">Наименование</th>
+                            <th scope="col">Адрес</th>
+                            <th scope="col">ОГРН</th>
+                            <th scope="col">ИНН</th>
+                            <th scope="col">Дата регистрации</th>
+                            <th scope="col">Удалить</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">ООО "Екатеринбургпрокатразнобыт" </td>
+                            <td>620026, Г ЕКАТЕРИНБУРГ, УЛ КАРЛА МАРКСА, Д 36, К 13</td>
+                            <td>667201001</td>
+                            <td>667201001</td>
+                            <td>23.09.2000</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">ООО "Екатеринбургпрокатразнобыт" </td>
+                            <td>620026, Г ЕКАТЕРИНБУРГ, УЛ КАРЛА МАРКСА, Д 36, К 13</td>
+                            <td>667201001</td>
+                            <td>667201001</td>
+                            <td>23.09.2000</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">ООО "Екатеринбургпрокатразнобыт" </td>
+                            <td>620026, Г ЕКАТЕРИНБУРГ, УЛ КАРЛА МАРКСА, Д 36, К 13</td>
+                            <td>667201001</td>
+                            <td>667201001</td>
+                            <td>23.09.2000</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">ООО "Екатеринбургпрокатразнобыт" </td>
+                            <td>620026, Г ЕКАТЕРИНБУРГ, УЛ КАРЛА МАРКСА, Д 36, К 13</td>
+                            <td>667201001</td>
+                            <td>667201001</td>
+                            <td>23.09.2000</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">ООО "Екатеринбургпрокатразнобыт" </td>
+                            <td>620026, Г ЕКАТЕРИНБУРГ, УЛ КАРЛА МАРКСА, Д 36, К 13</td>
+                            <td>667201001</td>
+                            <td>667201001</td>
+                            <td>23.09.2000</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">ООО "Екатеринбургпрокатразнобыт" </td>
+                            <td>620026, Г ЕКАТЕРИНБУРГ, УЛ КАРЛА МАРКСА, Д 36, К 13</td>
+                            <td>667201001</td>
+                            <td>667201001</td>
+                            <td>23.09.2000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Добавить юридичесое лицо</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Наименование</label>
+                            <input type="name" class="form-control" id="exampleInputName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputAddress" class="form-label">Адрес</label>
+                            <input type="address" class="form-control" id="exampleInputAddress">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputNumder1" class="form-label">ОГРН</label>
+                            <input type="number1" class="form-control" id="exampleInputNumber1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="number2" class="form-control" placeholder="ИНН"
+                                aria-label="Recipient's username" aria-describedby="button-addon2"
+                                id="exampleInputNumber2">
+                            <button class="btn btn-outline-secondary" type="button"
+                                id="button-addon2">Загрузить</button>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputDate" class="form-label">Дата регистрации</label>
+                            <input type="date" class="form-control" id="exampleInputDate">
+                        </div>
+                        <button type="submit" class="btn btn-secondary" id="btn1">Добавить</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let procRows = zen.querySelectorAll("tbody tr");
+        for (let i = 0; i < procRows.length; i++) {
+            procRows[i].innerHTML += '<td><button title="Remove"></td>';
+        }
+
+        zen.querySelector("tbody").addEventListener("click", function (e) {
+            if (e.target.nodeName == "BUTTON") {
+                let cell = e.target.parentNode;
+                cell.parentNode.classList.add("hidden");
+                e.target.remove();
+            }
+        })
+    </script>
+
+</body>
+
+</html>

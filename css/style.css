@@ -1,0 +1,43 @@
+.header {
+    height: 100px;
+    padding-top: 20px;
+}
+.add__btn{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 20px;
+
+}
+#zen button {
+    width: 36px; height: 36px;
+    background-image: url(/img/iconmonstr-trash-can-thin.svg);
+    margin-left: 1rem; border: none;
+    background-position: center 4px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    opacity: .6;
+    transition: .5s;
+  }
+
+  tbody tr button:hover {
+    opacity: .9;
+    cursor: pointer;
+  }
+
+  @keyframes hide {
+    to {
+      font-size: 0;
+      padding: 0;
+    }
+  }
+
+  tr.hidden td {
+    animation: hide 1s 1s forwards;
+  }
+  tr.hidden {
+    opacity: 0;
+    border-bottom: none;
+  }
+
+  #zen tr { transition: .8s opacity; }
